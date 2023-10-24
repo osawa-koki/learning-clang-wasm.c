@@ -1,9 +1,14 @@
 #include <stdio.h>
 #include <emscripten/emscripten.h>
 
+void println(char *str)
+{
+  printf("%s\n", str);
+}
+
 int main()
 {
-  printf("Hello World\n");
+  println("Clang Program called.");
   return 0;
 }
 
@@ -15,5 +20,5 @@ int main()
 
 EXTERN EMSCRIPTEN_KEEPALIVE void myFunction(int argc, char **argv)
 {
-  printf("MyFunction Called\n");
+  println("Clang-defined function called.");
 }
