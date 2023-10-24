@@ -17,6 +17,18 @@
       );
     }
   </script>
-  <button onclick="clicked()">Button</button>
+  <button onclick="clicked()">C-lang proc</button>
+  <script>
+    function concat() {
+      const result = Module.ccall(
+        "concat", // name of C function
+        "string", // return type
+        ["string", "string"], // argument types
+        ["Hello", "World!"], // arguments
+      );
+      console.log(result);
+    }
+  </script>
+  <button onclick="concat()">C-lang proc (concat)</button>
 </body>
 </html>
