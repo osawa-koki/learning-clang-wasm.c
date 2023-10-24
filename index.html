@@ -7,5 +7,16 @@
 </head>
 <body>
   <script src="a.out.js"></script>
+  <script>
+    function clicked() {
+      const result = Module.ccall(
+        "myFunction", // name of C function
+        null, // return type
+        null, // argument types
+        null, // arguments
+      );
+    }
+  </script>
+  <button onclick="clicked()">Button</button>
 </body>
 </html>
