@@ -37,8 +37,8 @@ EXTERN EMSCRIPTEN_KEEPALIVE char *concat(char *str1, char *str2)
 EXTERN EMSCRIPTEN_KEEPALIVE void showElement(char *id)
 {
   EM_ASM({
-    var id = UTF8ToString($0);
-    var element = document.getElementById(id);
+    const id = UTF8ToString($0);
+    const element = document.getElementById(id);
     console.log(element);
   }, id);
 }
