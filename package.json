@@ -1,0 +1,24 @@
+{
+  "name": "learning-clang-wasm.c",
+  "version": "1.0.0",
+  "description": "🛀🛀🛀 C言語でWebAssemblyを学ぶ！",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "dev": "http-server -c1 ./public/ -p 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osawa-koki/learning-clang-wasm.c.git"
+  },
+  "author": "osawa-koki <koki@osawa.dev>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/osawa-koki/learning-clang-wasm.c/issues"
+  },
+  "homepage": "https://github.com/osawa-koki/learning-clang-wasm.c#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
