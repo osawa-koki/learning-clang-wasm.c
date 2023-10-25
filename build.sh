@@ -2,7 +2,7 @@
 
 # Build the project
 echo "Building the project..."
-emcc ./main.c -s "EXPORTED_RUNTIME_METHODS=['ccall', 'cwrap']"
+emcc ./main.c -s "EXPORTED_RUNTIME_METHODS=['ccall', 'cwrap', '-Wimplicit-function-declaration']"
 
 # Copy the generated files to the public folder
 echo "Copying the generated files to the public folder..."
