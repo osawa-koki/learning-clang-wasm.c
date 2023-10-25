@@ -16,7 +16,7 @@
 	"forwardPorts": [8000],
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "cat /etc/os-release && emcc --version && chmod +x ./build.sh",
+	"postCreateCommand": "cat /etc/os-release && emcc --version && chmod +x ./build.sh && npm install",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
