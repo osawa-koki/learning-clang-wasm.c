@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <emscripten.h>
 #include <emscripten/emscripten.h>
 
 void println(char *str)
@@ -31,4 +32,13 @@ EXTERN EMSCRIPTEN_KEEPALIVE char *concat(char *str1, char *str2)
   strcpy(result, str1);
   strcat(result, str2);
   return result;
+}
+
+EXTERN EMSCRIPTEN_KEEPALIVE void showElement(char *id)
+{
+  EM_ASM({
+    const id = UTF8ToString($0);
+    const element = document.getElementById(id);
+    console.log(element);
+  }, id);
 }

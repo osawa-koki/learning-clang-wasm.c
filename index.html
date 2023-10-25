@@ -38,5 +38,13 @@
     );
   </script>
   <button onclick="myFunction()">C-lang fx (cwrap)</button>
+  <script id="MyId">
+    const showElement = Module.cwrap(
+      "showElement", // name of C function
+      null, // return type
+      ["string"], // argument types
+    );
+  </script>
+  <button onclick="showElement('MyId')">C-lang fx (showElement)</button>
 </body>
 </html>
